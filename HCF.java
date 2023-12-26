@@ -1,4 +1,4 @@
-// 1st program to find LCM of two number::
+// 1st program to find HCF of two number::
 class HelloWorld(){
   public static void main(String[] args){
     int n1=2;
