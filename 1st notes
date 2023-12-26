@@ -1,0 +1,22 @@
+26 dec 2023:
+							Java CheetSheet notes 
+
+* There are three types of languages (classification of programming languages based on their programming paradigm, which defines the style and structure of the code.):: 
+					i)   Procedural :- Systematic code with many rules like C
+					ii)  Functional :- works only with functions used in ML
+					iii) Object oriented :- Works with objects (code + data = object) like JAVA , C++ 
+					- use all three = PYTHON , C#, JS
+
+*Two types of language on basis of different characteristics of languages or aspects of language usage. 
+		lst) STATIC :- Involves analyzing code without executing it (in compile time). It includes techniques like code reviews, 			       syntax checking, and type checking performed at compile-time. In this pre defining of variable is crucial .
+				Eg. Java, C++, C
+		2nd) DYNAMIC :- In this anylizing code occur during runtime. It includes techniques like testing, profiling, and runtime 				monitoring. Here no need to declare data types 
+				Eg. Python, JS
+* Key point of JAVA:- 
+		1) Java is a static language 
+		2)Memory Management in Java: -Heap Memory - it stores the reference variable
+					     -Static Memory - it stores the object of that variable
+					* More than one reference variable can point to single object
+					* If There is a object without reference variable that that object will be destroyed by Garbage 					   Collector.
+
+
