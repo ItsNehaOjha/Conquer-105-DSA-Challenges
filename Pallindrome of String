@@ -1,0 +1,41 @@
+//1st approach with tim complexity of:  O(n), where n is the length of the input string.
+public static boolean isPallindrome(string str){
+    boolean ans = false;
+    //create reverse : neha ,in rev = ahen
+  string rev = "";
+  for( int i=str.length()-1,i>=0;i--){
+      rev += charAt(i);
+  }
+  // check if string and rev are eqalt
+  if(str == rev){
+    ans = true;
+  }
+  return ans;
+}
+public static void main(String[] args)
+    {
+        
+        String str = "neha";
+        // Convert the string to lowercase
+        str = str.toLowerCase();
+        boolean A = isPalindrome(str);
+        System.out.println(A);
+    }
+
+//anothe o(n) approach 
+
+public static boolean isPallindrome(string str){
+    int left =0;
+    int right = str.length()-1;
+    while(left< right){
+       if (str.charAt(left) != str.charAt(right)){
+          return false;
+      }
+      left ++;
+      right --;
+    }
+    return true;
+}
+
+
+
