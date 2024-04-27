@@ -1,5 +1,5 @@
 // 1st program to find HCF of two number::
-class HelloWorld(){
+class HCF{
   public static void main(String[] args){
     int n1=2;
     int n2=6;

@@ -6,17 +6,28 @@
 // step 4: reverse answer                              ans = 1010
 
 // by bitwise approach: 
-class solution{
- public in binarytodecimal(int n){
-   int ans=0;
-   int i=0;
-   while(n!=0){
-     int bit = (n & 1);
-       ans = (bit * pow(10,i)) +ans;
-       n =>>1;
-     i++;
-     }
-   return ans;
-   }
- }
+public class decimaltoBinary {
+
+  public static String decimalToBinary(int n) {
+      if (n == 0) {
+          return "0"; // Special case for decimal number 0
+      }
+
+      StringBuilder binary = new StringBuilder();
+
+      // Convert decimal number to binary using repeated division by 2
+      while (n > 0) {
+          int remainder = n % 2;
+          binary.insert(0, remainder); // Prepend remainder to binary string
+          n = n / 2;
+      }
+
+      return binary.toString();
+  }
+
+  public static void main(String[] args) {
+      int decimalNumber = 10;
+      String binaryRepresentation = decimalToBinary(decimalNumber);
+      System.out.println("Binary representation of " + decimalNumber + " is: " + binaryRepresentation);
+  }
 }

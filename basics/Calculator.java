@@ -6,7 +6,8 @@ class HelloWorld {
     public static void main(String[] args) {
         System.out.println("--------------------Hello, World! Welcome to my calculator --------------------");
         while(true){
-       Scanner scanner = new Scanner(System.in);
+       @SuppressWarnings("resource")
+    Scanner scanner = new Scanner(System.in);
 
         System.out.print("Enter first number : ");
         int a = scanner.nextInt();
@@ -34,5 +35,7 @@ class HelloWorld {
                
         }
         }
+         
     }
+   
 }
