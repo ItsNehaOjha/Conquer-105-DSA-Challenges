@@ -15,7 +15,7 @@ public class q3 {
         int[] arr = {1, 2, 4, 7, 7, 5};
         int res = betterSol(arr, arr.length);
         System.out.println("better solution gives the result: "+res);
-
+ 
         //easy optimal solution
         int[] result1 = solutionOfProblem(arr, arr.length);
 
