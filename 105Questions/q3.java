@@ -7,54 +7,87 @@ public class q3 {
     //          Output:
     //  Second Smallest : 2
     // 	Second Largest : 5
-    public static int[] getSecondOrderElements(int n, int[] arr) {
-        
-        if (n < 2 || arr == null || arr.length < n) {
-            return new int[]{-1, -1};
-        }
-
-       
-        int min = Integer.MAX_VALUE;
-        int secondMin = Integer.MAX_VALUE;
-        int max = Integer.MIN_VALUE;
-        int secondMax = Integer.MIN_VALUE;
-
-       
-        for (int num : arr) {
-            if (num < min) {
-                secondMin = min;
-                min = num;
-            } else if (num < secondMin && num != min) {
-                secondMin = num;
-            }
-
-            if (num > max) {
-                secondMax = max;
-                max = num;
-            } else if (num > secondMax && num != max) {
-                secondMax = num;
-            }
-        }
-
-
-        return new int[]{secondMin, secondMax};
-    }
-
-    
+    /**
+     * @param args
+     */
     public static void main(String[] args) {
        
         int[] arr = {1, 2, 4, 7, 7, 5};
+        int res = betterSol(arr, arr.length);
+        System.out.println("better solution gives the result: "+res);
 
-       
-        int[] result = getSecondOrderElements(arr.length, arr);
+        //easy optimal solution
+        int[] result1 = solutionOfProblem(arr, arr.length);
 
-       
-        if (result[0] == -1 || result[1] == -1) {
-            System.out.println("Second Smallest: -1");
-            System.out.println("Second Largest: -1");
-        } else {
-            System.out.println("Second Smallest: " + result[0]);
-            System.out.println("Second Largest: " + result[1]);
-        }
+        System.out.println("Second Smallest Digit: " + result1[0]);
+        System.out.println("Second Largest Digit: " + result1[1]);
+        
     }
+
+    
+    //better solution:
+
+    public static int  betterSol(int[] arr, int n){
+        int lar= -1;
+        for(int i=0;i<n;i++){
+            if(arr[i]>lar){
+                lar=arr[i];
+            }
+        }
+        int seclar=-1;
+        for(int j=0;j<n;j++){
+            if(arr[j]>seclar && arr[j]!=lar){
+                seclar= arr[j];
+            }
+        }
+        return seclar;  
+    }
+//---------------------------------------------------------------------------------------------------
+    // easy optimal sol with two functions separately for second smallest and second largest
+
+    public static int secondLargetDigit(int[] arr,int n ){
+
+        int largest= arr[0];
+        int secondLargest= -1;
+        for (int i=1;i<n; i++){
+
+            if(arr[i]>largest){
+                secondLargest= largest;
+                largest= arr[i];
+            }else if(arr[i]<largest && arr[i]>secondLargest){
+                secondLargest=arr[i];
+            }
+        }
+
+        return secondLargest;
+        
+    }
+    public static int secondSmallestDigit(int[] arr,int n ){
+
+        //arr = {1,2,4,7,7,5}
+        int smallest= arr[0];
+        int secondsmallest= Integer.MAX_VALUE;
+        for (int i=1;i<n; i++){
+            if(arr[i]<smallest){
+                secondsmallest= smallest;
+                smallest= arr[i];
+            }else if(arr[i]!=smallest && arr[i]<secondsmallest){
+                secondsmallest=arr[i];
+            }
+            
+        }
+
+        return secondsmallest;
+        
+    }
+    public static int[] solutionOfProblem(int[]arr, int n){
+        int sSmall= secondSmallestDigit(arr, n);
+        int sLargest = secondLargetDigit(arr, n);
+        return new int[]{sSmall,sLargest};
+    }
+
+//---------------------------------------------------------------------------------------------------
+   
+    
+    
 }
