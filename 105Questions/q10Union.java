@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class Solution {
+public class q10Union {
     public static List<Integer> sortedArray(int[] a, int[] b) {
         ArrayList<Integer> ans = new ArrayList<>();
         int n1 = a.length;
