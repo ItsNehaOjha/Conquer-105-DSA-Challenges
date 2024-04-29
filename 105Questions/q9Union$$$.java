@@ -1,13 +1,18 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class q10Union {
+public class q9Union$$$ {
+
+    // int[] a = {1, 3, 5, 7};   int[] b = {2, 4, 5, 6, 8}; 
+    // output : Merged and Sorted List: [1, 2, 3, 4, 5, 6, 7, 8]
+    
     public static List<Integer> sortedArray(int[] a, int[] b) {
         ArrayList<Integer> ans = new ArrayList<>();
         int n1 = a.length;
         int n2 = b.length;
         int i = 0;
         int j = 0;
+
 
         // Merge sorted arrays 'a' and 'b' into 'ans'
         while (i < n1 && j < n2) {
