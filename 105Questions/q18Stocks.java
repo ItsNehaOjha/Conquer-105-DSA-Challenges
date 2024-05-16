@@ -14,39 +14,50 @@
 public class q18Stocks {
 
     public static void main(String[] args) {
-        // Example usage of maxProfit function
-        int[] prices = {7, 1, 5, 3, 6, 4}; // Prices on consecutive days
+        
+        int[] prices = {7, 1, 5, 3, 6, 4}; 
         int maxProfit = maxProfit(prices);
         
         System.out.println("Maximum profit: " + maxProfit);
     }
     public static int maxProfit(int[] prices) {
         if (prices == null || prices.length < 2) {
-            return 0; // If there are less than 2 prices, no profit can be made
+            return 0; 
         }
         
-        int buy = prices[0]; // Initialize buying price with the price of the first day
-        int profit = 0; // Initialize profit to 0
+        int buy = prices[0]; 
+        int profit = 0; 
         
         for (int i = 1; i < prices.length; i++) {
-            int sell = prices[i]; // Price on the current day
-            
-            // Calculate the potential profit if we sell at the current price
+            int sell = prices[i]; 
+             
             int currentProfit = sell - buy;
             
-            // Update the maximum profit obtained so far
+            
             if (currentProfit > profit) {
                 profit = currentProfit;
             }
             
-            // Update the buying price to the minimum of the current buying price and the current day's price
+           
             if (buy > sell) {
                 buy = sell;
             }
         }
         
         return profit;
-    }
 
+    }
+    public static int stocks(int[] a){
+        int mini = a[0];
+        int profit=0;
+        int n= a.length;
+        for(int i=1;i<n;i++){
+            int cost =a[i]- mini;
+            profit = Math.max(cost, profit);
+            mini= Math.min(a[i],mini);
+
+        }
+        return profit;
+    }
     
 }
