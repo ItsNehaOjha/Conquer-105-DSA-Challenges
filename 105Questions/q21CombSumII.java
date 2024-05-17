@@ -2,6 +2,15 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+// 40. Combination Sum II
+// Input: candidates = [10,1,2,7,6,1,5], target = 8
+// Output: 
+// [
+// [1,1,6],
+// [1,2,5],
+// [1,7],
+// [2,6]
+// ]
 
 public class q21CombSumII {
     public static List<List<Integer>> combinationSum(int[] candidates, int target) {
