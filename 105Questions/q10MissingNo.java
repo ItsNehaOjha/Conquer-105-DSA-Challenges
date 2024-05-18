@@ -12,7 +12,7 @@ public class q10MissingNo {
         System.out.println("Missing Number by Formula: " + missing2);  // Output: 2
         System.out.println("Missing Number by XOR: " + missing3);  // Output: 3
     }
-   
+   //by cyclic sort
     public static int missingNumber(int[] nums) {
         int n = nums.length;
     
@@ -39,7 +39,8 @@ public class q10MissingNo {
         nums[j] = temp;
     }
 
-    // Method to find missing number using formula
+    // Method to find missing number using formula: 0 se n tak ka sum , 
+    //minus current array ka sum, result hi missing number hoga
     public static int byFormulae(int[] arr) {
         int n = arr.length;
         int sum = (n * (n + 1)) / 2;
