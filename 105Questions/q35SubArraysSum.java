@@ -11,7 +11,8 @@ public class q35SubArraysSum {
     // Explanation: No two subarrays of size 2 have the same sum.
 
     public static void main(String[] args) {
-        
+        int nums = [4,2,4];
+        System.out.println(findSubarrays(nums));
     }
     public static boolean findSubarrays(int[] nums){
         int n = nums.length;
