@@ -93,6 +93,10 @@ public class q42Knight {
             return true;
         }
 
+        // Mark the current cell as visited
+        int temp = grid[row][col];
+        grid[row][col] = -1;
+
         // Define all possible knight moves
         int[][] moves = {
             {-2, -1}, {-2, 1}, {2, -1}, {2, 1},
@@ -109,6 +113,9 @@ public class q42Knight {
                 }
             }
         }
+
+        // Unmark the current cell (backtrack)
+        grid[row][col] = temp;
 
         return false;
     }
