@@ -82,7 +82,7 @@ public class q8MoveZeroes {
         while(count<arr.length){
             arr[count]=0;
             count++;
-        }
+        }/
     }
     //optimal approach : two pointer approach
     public static void optimalSol(int[] arr, int n){

@@ -39,8 +39,6 @@ public class q7RotateArray{
         int n=arr.size();
         ArrayList<Integer> rotated = new ArrayList<>(n);
 
-        
-
         for(int i=0;i<n;i++){
             int newIndex= (i+k)%n ;
              // Add element to new ArrayList at rotated index
