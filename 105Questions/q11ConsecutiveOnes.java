@@ -20,7 +20,7 @@ public class q11ConsecutiveOnes {
                 if(count>max){
                     max++;
                 }
-            }else{
+            }else{ 
                 count=0;
             }
         }
