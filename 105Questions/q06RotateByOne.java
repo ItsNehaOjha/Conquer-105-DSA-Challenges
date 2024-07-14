@@ -1,4 +1,4 @@
-class q6{
+class q06RotateByOne{
     public static void main(String[] args) {
         // Left Rotate the Array by One
         // NOTE: make sure in new array you are putting the rotated elements

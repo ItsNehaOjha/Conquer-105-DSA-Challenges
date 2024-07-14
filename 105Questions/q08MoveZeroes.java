@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 import java.util.Arrays;
-public class q8MoveZeroes {
+public class q08MoveZeroes {
     public static void main(String[] args) {
 
         //----------------move zeroes in right and left-----------------

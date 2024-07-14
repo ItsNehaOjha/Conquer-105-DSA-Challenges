@@ -1,4 +1,4 @@
-class q1{
+class q01Recursion{
     public static void main(String[]args){
         // Given a number ‘N’, find out the sum of the first N natural numbers. USING RECURSION
 

@@ -1,4 +1,4 @@
-public class q2 {
+public class q02LargestElement {
     public static void main(String[] args) {
         // Given an array, we have to find the largest element in the array.
         //  arr[] = {2,5,1,3,0}; Output: 5

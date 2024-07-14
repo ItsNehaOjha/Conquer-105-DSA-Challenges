@@ -1,4 +1,4 @@
-class q4{
+class q04SortedAndRotated{
 
     // Check if Array Is Sorted and Rotated
     //     Input: nums = [3,4,5,1,2]

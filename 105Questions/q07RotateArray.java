@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.Arrays;
      // -------------rotate array by d----------(two approach)
-public class q7RotateArray{
+public class q07RotateArray{
     public static void main(String[] args) {
         // Given an array 'arr' with 'n' elements, the task is to rotate the array to the left by 'k' steps, where 'k' is non-negative.
         // BY ARRAYLIST

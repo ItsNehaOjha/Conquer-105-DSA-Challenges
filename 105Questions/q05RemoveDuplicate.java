@@ -1,4 +1,4 @@
-public class q5 {
+public class q05RemoveDuplicate {
     
 
     // 26. Remove Duplicates from Sorted Array

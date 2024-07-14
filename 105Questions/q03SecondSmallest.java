@@ -1,4 +1,4 @@
-public class q3 {
+public class q03SecondSmallest {
 
     // Method to find the second smallest and second largest elements in the array
       // Given an array, find the second smallest and second largest element in the array. Print ‘-1’ in the event that either of them doesn’t exist.
