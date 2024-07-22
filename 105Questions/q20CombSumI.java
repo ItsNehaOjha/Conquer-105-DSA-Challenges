@@ -22,7 +22,7 @@ public class q20CombSumI {
                 ans.add(new ArrayList<>(ds));
             }
             return;
-        }
+        } 
         
         // pick condition
         if (arr[ind] <= target) {

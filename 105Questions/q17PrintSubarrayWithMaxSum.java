@@ -1,5 +1,11 @@
-//print the subarray with max sum
 
+// 53. Maximum Subarray
+
+// Given an integer array nums, find the subarray with the largest sum, and return its sum.
+
+// Input: nums = [-2,1,-3,4,-1,2,1,-5,4]
+// Output: 6
+// Explanation: The subarray [4,-1,2,1] has the largest sum 6.
 
 public class q17PrintSubarrayWithMaxSum {
     public static long maxSubarraySum(int[] arr, int n) {
@@ -22,7 +28,7 @@ public class q17PrintSubarrayWithMaxSum {
             }
 
             // If sum < 0: discard the sum calculated
-            if (sum < 0) {
+            if (sum < 0) {  // negative sum 
                 sum = 0;
             }
         }
