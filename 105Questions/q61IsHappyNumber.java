@@ -1,5 +1,7 @@
-class Solution {
-    public boolean isHappy(int n) {
+
+
+public class q61IsHappyNumber {
+    public static boolean isHappy(int n) {
         int fast = n;
         int slow = n;
         
@@ -14,7 +16,7 @@ class Solution {
     }
     
     // Helper function to calculate the sum of squares of digits
-    public int calculateSquare(int num) {
+    public static int calculateSquare(int num) {
         int ans = 0;
         while (num > 0) {
             int rem = num % 10;
@@ -23,17 +25,14 @@ class Solution {
         }
         return ans;
     }
-}
-
-public class q61IsHappyNumber {
     public static void main(String[] args) {
-        Solution solution = new Solution();
+        
         
         int n = 19; // Change this value to check different numbers
         System.out.println("Checking if " + n + " is a happy number:");
         
         // Check if the number is happy and print result
-        if (solution.isHappy(n)) {
+        if (isHappy(n)) {
             System.out.println(n + " is a happy number!");
         } else {
             System.out.println(n + " is not a happy number.");

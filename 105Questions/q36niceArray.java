@@ -1,5 +1,3 @@
-import java.util.HashMap;
-
 public class q36niceArray {
     
     // 1248. Count Number of Nice Subarrays
