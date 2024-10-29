@@ -50,10 +50,3 @@ public class q27Leader {
 }
 
 
-// 🚀 Day 26: "Conquer 105 DSA Challenges"!
-
-// Problem: Next Permutation (Find the next lexicographical permutation).
-
-// Example: [1, 2, 3]
-// Output: [1, 3, 2]
-// 📝 GitHub

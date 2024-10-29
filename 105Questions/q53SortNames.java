@@ -39,7 +39,7 @@ public class q53SortNames {
             heights[i]= heights[n-1-i];
             heights[n-1-i]= temp;
         }
-
+ 
         for(int i=0;i<n;i++){
             names[i]= mapping.get(heights[i]);
         }

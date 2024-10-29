@@ -15,17 +15,31 @@ public class Q54LambdaUse {
 
     public int[] frequencySort(int[] nums) {
         int n = nums.length;
+        
+        // Yahaan nums array ko temp array mein copy kiya ja raha hai, kyunki hum [Integer] array pe sorting apply karenge. Integer 
+        // array isliye use kiya gaya hai kyunki Arrays.sort() method lambda expressions ke sath kaam karta hai sirf Integer[] type pe,
+        //  primitive int[] pe nahi.
 
         Integer[] temp = new Integer[n];
         for (int i = 0; i < n; i++) {
             temp[i] = nums[i];
         }
 
+        // ***8Lambda Expression ki Zarurat*****
+        // NOTE :::: Custom sorting logic ko implement karne ke liye hume comparator ki zarurat hoti hai
+
         int[] freq = new int[201];
         for (int x : nums) {
             freq[v(x)]++;
         }
+
+// Key frequencies:
+
+// freq[101] = 2 (element 1 appears 2 times)
+// freq[102] = 3 (element 2 appears 3 times)
+// freq[103] = 1 (element 3 appears 1 time)
         
+
         Arrays.sort(temp, (x, y) -> 
             freq[v(x)] == freq[v(y)] ? y - x : freq[v(x)] - freq[v(y)]
         );
