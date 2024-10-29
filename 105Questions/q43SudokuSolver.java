@@ -1,16 +1,11 @@
-public class q43SudukoSolver {
-    
-
-//     37. Sudoku Solver
-
-// Write a program to solve a Sudoku puzzle by filling the empty cells.
-
-// A sudoku solution must satisfy all of the following rules:
-
-// Each of the digits 1-9 must occur exactly once in each row.
-// Each of the digits 1-9 must occur exactly once in each column.
-// Each of the digits 1-9 must occur exactly once in each of the 9 3x3 sub-boxes of the grid.
-// The '.' character indicates empty cells.
+public class q43SudokuSolver {
+    // 37. Sudoku Solver
+    // Write a program to solve a Sudoku puzzle by filling the empty cells.
+    // A sudoku solution must satisfy all of the following rules:
+    // Each of the digits 1-9 must occur exactly once in each row.
+    // Each of the digits 1-9 must occur exactly once in each column.
+    // Each of the digits 1-9 must occur exactly once in each of the 9 3x3 sub-boxes of the grid.
+    // The '.' character indicates empty cells.
 
     public static void main(String[] args) {
         // Example Sudoku board
@@ -28,6 +23,7 @@ public class q43SudukoSolver {
         solveSudoku(board);
         printBoard(board);
     }
+
     private static void printBoard(char[][] board) {
         for (int i = 0; i < board.length; i++) {
             for (int j = 0; j < board[0].length; j++) {
@@ -36,43 +32,47 @@ public class q43SudukoSolver {
             System.out.println();
         }
     }
-    public void solveSudoku(char[][] board) {
+
+    public static void solveSudoku(char[][] board) {
         solve(board, 0, 0);
     }
-    public static boolean solve(char[][]board, int row, int col){
-        if(row== board.length){
-            return true;
+
+    public static boolean solve(char[][] board, int row, int col) {
+        if (row == board.length) {
+            return true; // Puzzle solved
         }
 
-       // Move to next row when current row is fully filled
+        // Move to next row when current row is fully filled
         if (col == board[0].length) {
             return solve(board, row + 1, 0);
         }
 
-        if( board[row][col]!= '.'){
-            return solve(board, row, col+1);
-            
+        // Skip filled cells
+        if (board[row][col] != '.') {
+            return solve(board, row, col + 1);
         }
-        for(char num ='1'; num<='9'; num++){
-            if(isValid(board, row, col)){
-                board[row][col]= num;
-                if(isSafe(board, row , col+1)){
-                    return true;
+
+        // Try numbers from 1 to 9
+        for (char num = '1'; num <= '9'; num++) {
+            if (isValid(board, row, col, num)) {
+                board[row][col] = num; // Place the number
+                // Recursively attempt to fill the next cells
+                if (solve(board, row, col + 1)) {
+                    return true; // Return true if the rest of the board can be solved
                 }
-                board[row][col]= '.'
+                board[row][col] = '.'; // Backtrack
             }
         }
-        return false;
-
+        return false; // Trigger backtrack
     }
 
-    private boolean isValid(char[][] board, int row, int col, char num) {
+    private static boolean isValid(char[][] board, int row, int col, char num) {
         for (int i = 0; i < board.length; i++) {
             if (board[row][i] == num) {
-                return false;
+                return false; // Check row
             }
             if (board[i][col] == num) {
-                return false;
+                return false; // Check column
             }
         }
 
@@ -83,14 +83,11 @@ public class q43SudukoSolver {
         for (int r = rStart; r < rStart + sqrt; r++) {
             for (int c = cStart; c < cStart + sqrt; c++) {
                 if (board[r][c] == num) {
-                    return false;
+                    return false; // Check sub-box
                 }
             }
         }
 
-        return true;
+        return true; // Number is valid
     }
-    
-
 }
-

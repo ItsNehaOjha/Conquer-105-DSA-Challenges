@@ -1,8 +1,7 @@
 public class q46AverageWaitingTime {
-    public static void main(String[] args) {
-        
 
-        // 1701. Average Waiting Time
+    
+     // 1701. Average Waiting Time
         // Input: customers = [[1,2],[2,5],[4,3]]
         // Output: 5.00000
         // Explanation:
@@ -12,37 +11,38 @@ public class q46AverageWaitingTime {
         // So the average waiting time = (2 + 6 + 7) / 3 = 5.
 
 
+
+    public static void main(String[] args) {
         // Test case 1
         int[][] customers1 = {{1, 2}, {2, 5}, {4, 3}};
-        System.out.println("Test case 1: " +  averageWaitingTime(customers1)); // Expected output: 5.0
+        System.out.println("Test case 1: " + new Solution().averageWaitingTime(customers1)); // Expected output: 5.0
 
         // Test case 2
         int[][] customers2 = {{5, 2}, {5, 4}, {10, 3}};
-        System.out.println("Test case 2: " +  averageWaitingTime(customers2)); // Expected output: 4.0
+        System.out.println("Test case 2: " + new Solution().averageWaitingTime(customers2)); // Expected output: 4.0
 
         // Test case 3
         int[][] customers3 = {{1, 2}, {2, 2}, {3, 2}};
-        System.out.println("Test case 3: " +  averageWaitingTime(customers3)); // Expected output: 3.0
+        System.out.println("Test case 3: " + new Solution().averageWaitingTime(customers3)); // Expected output: 3.0
 
         // Test case 4
         int[][] customers4 = {{1, 10}, {5, 10}, {15, 10}};
-        System.out.println("Test case 4: " +  averageWaitingTime(customers4)); // Expected output: 10.0
+        System.out.println("Test case 4: " + new Solution().averageWaitingTime(customers4)); // Expected output: 10.0
     }
 }
 
 class Solution {
     public double averageWaitingTime(int[][] customers) {
-        int idle = 1;
+        long idle = 0;
         long totalTime = 0;
         for (int[] cust : customers) {
             if (idle <= cust[0]) {
                 idle = cust[0] + cust[1];
             } else {
-                idle = idle + cust[1];
+                idle += cust[1];
             }
             totalTime += idle - cust[0];
         }
-        double avg = totalTime / (double) customers.length;
-        return avg;
+        return totalTime / (double) customers.length;
     }
 }
