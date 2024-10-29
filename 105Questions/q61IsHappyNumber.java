@@ -5,7 +5,7 @@ class Solution {
         
         // Using the two-pointer technique to detect cycles
         do {
-            slow = calculateSquare(slow);            
+            slow = calculateSquare(slow);
             fast = calculateSquare(calculateSquare(fast));
         } while (fast != slow);
         
@@ -25,7 +25,7 @@ class Solution {
     }
 }
 
-public class q61IsHappy {
+public class q61IsHappyNumber {
     public static void main(String[] args) {
         Solution solution = new Solution();
         
