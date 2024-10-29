@@ -1,5 +1,4 @@
-public class q68BubbleSortLL  {
-    
+public class q68BubbleSortLL  {    
     private Node head;
     private Node tail;
     public class Node{
@@ -11,7 +10,6 @@ public class q68BubbleSortLL  {
             this.val =val;
         }
     }
-
     public Node append(int val){
         Node node = new Node(val);
         if(head == null){
@@ -23,7 +21,6 @@ public class q68BubbleSortLL  {
         }
         return node;
     }
-
     public void display(){
         Node current =head;
         while(current!=null){
@@ -46,7 +43,6 @@ public class q68BubbleSortLL  {
         if(col<row){
             Node first = getNode(col);
             Node second = getNode(col+1);
-
             //cases
             if(first.val > second.val){
                 //swap
