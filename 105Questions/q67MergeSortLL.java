@@ -4,7 +4,6 @@ public class q67MergeSortLL {
     
     public q67MergeSortLL() {
     }
-
     public class LinkNode {
         private LinkNode next;
         private int value;
