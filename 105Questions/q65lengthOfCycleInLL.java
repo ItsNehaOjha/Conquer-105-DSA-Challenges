@@ -13,13 +13,11 @@
  public class q65lengthOfCycleInLL {
     private Node head;
     private Node tail;
-    private int size;
-
+    
     // Constructor to initialize the linked list
     public q65lengthOfCycleInLL() {
         this.head = null;
         this.tail = null;
-        this.size = 0;
     }
 
     // Definition of Node class
@@ -43,7 +41,6 @@
             tail.next = newNode;
             tail = newNode;
         }
-        size++;
     }
 
     // Method to find the length of the cycle in the linked list

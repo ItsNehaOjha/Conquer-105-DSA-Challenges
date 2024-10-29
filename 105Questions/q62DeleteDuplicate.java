@@ -12,13 +12,11 @@
  public class q62DeleteDuplicate {
     private Node head;
     private Node tail;
-    private int size;
-
+    
     // Constructor to initialize the linked list
     public q62DeleteDuplicate() {
         this.head = null;
         this.tail = null;
-        this.size = 0;
     }
 
     // Definition of Node class
@@ -42,7 +40,6 @@
             tail.next = newNode;
             tail = newNode;
         }
-        size++;
     }
 
     // Method to remove duplicates from the linked list

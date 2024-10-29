@@ -14,13 +14,11 @@
  public class q63mergeLinkedList {
     private Node head;
     private Node tail;
-    private int size;
-
+    
     // Constructor to initialize the linked list
     public q63mergeLinkedList() {
         this.head = null;
         this.tail = null;
-        this.size = 0;
     }
 
     // Definition of Node class
@@ -44,7 +42,6 @@
             tail.next = newNode;
             tail = newNode;
         }
-        size++;
     }
 
     // Method to merge two sorted linked lists

@@ -14,13 +14,11 @@
  public class q64detectCycleInLL {
     private Node head;
     private Node tail;
-    private int size;
-
+    
     // Constructor to initialize the linked list
     public q64detectCycleInLL() {
         this.head = null;
         this.tail = null;
-        this.size = 0;
     }
 
     // Definition of Node class
@@ -44,7 +42,6 @@
             tail.next = newNode;
             tail = newNode;
         }
-        size++;
     }
 
     // Method to detect cycle in the linked list
