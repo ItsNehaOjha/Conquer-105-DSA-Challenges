@@ -1,6 +1,6 @@
 
 public class q76HeightOfBT {
-    // two pproaches : LOT and Recursion 
+    // two approaches : LOT and Recursion 
     // prefer recursion
 
     public static class Node {
